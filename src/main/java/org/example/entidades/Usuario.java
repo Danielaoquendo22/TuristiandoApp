@@ -3,7 +3,7 @@ package org.example.entidades;
 import org.example.utilidades.Util;
 import org.example.validaciones.UsuarioValidacion;
 
-public class Usuario {
+public abstract class Usuario {
     protected Util util = new Util();
     private Integer id;
     private String documento;
@@ -84,4 +84,10 @@ public class Usuario {
 
         }
     }
+    //como padre declaro que todos mis hijos deben:
+    //1. Registrarse en plataforma.
+
+    public  abstract Boolean registrar();
+
+
 }

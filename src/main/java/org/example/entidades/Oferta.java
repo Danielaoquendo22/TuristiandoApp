@@ -4,7 +4,6 @@ import org.example.utilidades.Util;
 import org.example.validaciones.OfertaValidacion;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Oferta {
 
@@ -14,7 +13,7 @@ public class Oferta {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private Double costoPersona;
-    private Local local;
+    private Empresa local;
     protected Util util = new Util();
 
     protected OfertaValidacion validacion = new OfertaValidacion();
@@ -22,7 +21,7 @@ public class Oferta {
     public Oferta() {
     }
 
-    public Oferta(Integer id, String titulo, String descripcion, LocalDate fechaInicio, LocalDate fechaFin, Double costoPersona, Local local) {
+    public Oferta(Integer id, String titulo, String descripcion, LocalDate fechaInicio, LocalDate fechaFin, Double costoPersona, Empresa local) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -111,11 +110,11 @@ public class Oferta {
 
     }
 
-    public Local getLocal() {
+    public Empresa getLocal() {
         return local;
     }
 
-    public void setLocal(Local local) {
+    public void setLocal(Empresa local) {
         this.local = local;
     }
 }

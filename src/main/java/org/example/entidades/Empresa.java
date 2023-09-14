@@ -3,7 +3,7 @@ package org.example.entidades;
 import org.example.utilidades.Util;
 import org.example.validaciones.LocalValidacion;
 
-public class Local {
+public abstract class Empresa {
     protected Util util= new Util();
 
     private Integer id;
@@ -14,10 +14,10 @@ public class Local {
 
     protected LocalValidacion validacion = new LocalValidacion();
 
-    public Local() {
+    public Empresa() {
     }
 
-    public Local(Integer id, String nit, String nombre, Integer ubicacion, String descripcion) {
+    public Empresa(Integer id, String nit, String nombre, Integer ubicacion, String descripcion) {
         this.id = id;
         this.nit = nit;
         this.nombre = nombre;
@@ -80,4 +80,6 @@ public class Local {
 
         this.descripcion = descripcion;
     }
+
+    public abstract Double cobro();
 }
